@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2024 at 06:24 PM
+-- Generation Time: Jun 12, 2024 at 01:55 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -69,8 +69,13 @@ CREATE TABLE `employees` (
 
 INSERT INTO `employees` (`id`, `employee_id`, `first_name`, `last_name`, `job_title`, `department_id`, `date_of_birth`, `date_hired`, `email`, `phone_number`, `address`, `pass`) VALUES
 (16, 'ID001', 'Alex', 'Chandra', 'IT Infrastucture', 4, '1997-06-18', '2022-06-14', 'alex@gmail.com', '081262373637', 'Batam', '$2y$10$/miVulXnWHFiXkF6QVw4yOkoS.xeFcENPH7z7.6JmCITQNTQ1mBIm'),
-(17, 'ID002', 'Ria', 'Yunita', 'HR Staff', 2, '2000-02-01', '2024-06-01', 'ria@gmail.com', '08126253533', 'Jakarta', '$2y$10$9TQxaaFcZG8AOw6cX3roIuZGOj65/y6j/w78kB/SlExRc6PunVTS2'),
-(18, 'ID005', 'Jennie', 'Julie', 'Finance Staff', 1, '1991-10-23', '2005-10-28', 'jennie@gmail.com', '081272636', 'Bekasi', '$2y$10$xFy3Jk9Qyes/5KPvBpxe8.nS4MBChT57L15qaTHMlzP/wjHHpWqU.');
+(21, 'ID002', 'Jennie', 'Julie', 'HR Staff', 2, '1999-07-12', '2022-07-12', 'jennie@gmail.com', '08315378136', 'Batam', '$2y$10$JaagN5xtgS8wPtL38WKaCO8e4JBCPnEw/sKsXePdYOpR2mmOkCKqi'),
+(22, 'ID003', 'Hendra', 'Jaya', 'Finance Staff', 1, '1998-02-02', '2021-02-09', 'hendra@gmail.com', '081276348728', 'Batam\r\n', '$2y$10$wy7WRojfdxQgpjPLSu3OruKgza3LCcqiBf/JISsZUo/vKwfw7e/0i'),
+(23, 'ID004', 'Ajeng', 'Dewi', 'Payroll Officer', 2, '2000-09-08', '2023-09-07', 'ajeng@gmail.com', '0812626823', 'Batam', '$2y$10$TvXE.b/Rqb4aynOo8ub.Q.8RpGVXfKF8fNs1wXfMB5fwQraDKf8K.'),
+(24, 'ID005', 'Kartika', 'Putri', 'Material Engineer', 3, '1998-09-09', '2024-02-03', 'kartika@gmail.com', '081267828635', 'Batam\r\n', '$2y$10$50GIDMQBJ.z6eeNGHElYRu2Iv/YKwcBbOiSOpAbe7xmIGk7sJUNdC'),
+(25, 'ID006', 'Putra', 'Jaya', 'Mechanical Engineering', 3, '2000-03-05', '2023-02-04', 'putra@gmail.com', '08127236428', 'Batam', '$2y$10$qo3WZl7XlnZ.XePZPsEC2uXno/HHIUem32qmzTp9htuKGaFCwOZ9K'),
+(26, 'ID007', 'Ayu', 'Sinta', 'System Analyst', 4, '1996-02-02', '2022-02-04', 'ayu@gmail.com', '0816327468', 'Batam\r\n', '$2y$10$qgaIHUuY8E53pS1gPBJBee1T1MB4XxG0oUzHATVwY9AmRT2QLP2eq'),
+(27, 'ID008', 'Shintia', 'Lubis', 'IT Programmer', 4, '2000-07-04', '2024-02-05', 'shintia@gmail.com', '08216354736', 'Batam\r\n', '$2y$10$lDFIAGv4l67OIXpI4jl.Vee0Ea.Tsq9r3CQPCOYJdhAXxTzPK29Le');
 
 --
 -- Indexes for dumped tables
@@ -103,7 +108,7 @@ ALTER TABLE `departments`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables
