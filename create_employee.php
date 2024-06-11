@@ -1,9 +1,7 @@
 <?php
-
 session_start();
 
 include 'db_config.php';
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $employee_id = $_POST['employee_id'];
@@ -18,21 +16,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST['address'];
     $pass = $_POST['pass'];
 
+    // Check if the employee_id already exists
+    $check_sql = "SELECT employee_id FROM employees WHERE employee_id = '$employee_id'";
+    $check_result = $conn->query($check_sql);
+
+    if ($check_result->num_rows > 0) {
+        $_SESSION['status'] = 'failed';
+        $_SESSION['message'] = 'Employee ID already exists!';
+        header('Location: form-create.php');
+        exit();
+    }
+
     // Hash the password
     $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
 
-
+    // Insert new employee record
     $sql = "INSERT INTO employees (employee_id, first_name, last_name, job_title, department_id, date_of_birth, date_hired, email, phone_number, address, pass) 
             VALUES ('$employee_id','$first_name', '$last_name', '$job_title', $department_id, '$date_of_birth', '$date_hired', '$email', '$phone_number', '$address', '$hashed_pass')";
 
     try {
         if ($conn->query($sql) === TRUE) {
             $_SESSION['status'] = 'success';
-            $_SESSION['message'] = 'Succesfully Inserted!';
+            $_SESSION['message'] = 'Successfully Inserted!';
             header('Location: index.php');
             exit();
         } else {
-            throw new Exception("Failed to update data");
+            throw new Exception("Failed to insert data");
         }
     } catch (Exception $e) {
         $error_message = urlencode($e->getMessage());
@@ -46,3 +55,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Location: index.php');
     exit();
 }
+?>
