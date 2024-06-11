@@ -3,7 +3,7 @@ session_start();
 include 'db_config.php';
 
 if (!isset($_GET['id'])) {
-    header('Location: index.php');
+    echo "Employee ID Not Find";
 }
 
 $id = $_GET['id'];

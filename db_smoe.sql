@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2024 at 05:41 PM
+-- Generation Time: Jun 11, 2024 at 06:24 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -70,7 +70,7 @@ CREATE TABLE `employees` (
 INSERT INTO `employees` (`id`, `employee_id`, `first_name`, `last_name`, `job_title`, `department_id`, `date_of_birth`, `date_hired`, `email`, `phone_number`, `address`, `pass`) VALUES
 (16, 'ID001', 'Alex', 'Chandra', 'IT Infrastucture', 4, '1997-06-18', '2022-06-14', 'alex@gmail.com', '081262373637', 'Batam', '$2y$10$/miVulXnWHFiXkF6QVw4yOkoS.xeFcENPH7z7.6JmCITQNTQ1mBIm'),
 (17, 'ID002', 'Ria', 'Yunita', 'HR Staff', 2, '2000-02-01', '2024-06-01', 'ria@gmail.com', '08126253533', 'Jakarta', '$2y$10$9TQxaaFcZG8AOw6cX3roIuZGOj65/y6j/w78kB/SlExRc6PunVTS2'),
-(18, 'ID003', 'Jennie', 'Julie', 'Finance Staff', 1, '1991-10-23', '2005-10-28', 'jennie@gmail.com', '081272636', 'Bekasi', '$2y$10$xFy3Jk9Qyes/5KPvBpxe8.nS4MBChT57L15qaTHMlzP/wjHHpWqU.');
+(18, 'ID005', 'Jennie', 'Julie', 'Finance Staff', 1, '1991-10-23', '2005-10-28', 'jennie@gmail.com', '081272636', 'Bekasi', '$2y$10$xFy3Jk9Qyes/5KPvBpxe8.nS4MBChT57L15qaTHMlzP/wjHHpWqU.');
 
 --
 -- Indexes for dumped tables
@@ -87,7 +87,6 @@ ALTER TABLE `departments`
 --
 ALTER TABLE `employees`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `employee_id` (`employee_id`),
   ADD KEY `department_id` (`department_id`);
 
 --
@@ -104,7 +103,7 @@ ALTER TABLE `departments`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
